@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AddressValidation.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AddressValidation">
+          <Key>
+            <PropertyRef Name="AddressValidationId" />
+          </Key>
+          <Property Name="AddressValidationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SysCreated" Type="datetime2" Precision="7" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="SysCreatedBy" Type="nvarchar" MaxLength="128" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="SysLastModified" Type="datetime2" Precision="7" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="SysLastModifiedBy" Type="nvarchar" MaxLength="128" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="EnterpriseID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="LoginID" Type="varchar" MaxLength="100" />
+          <Property Name="UserName" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="40" />
+          <Property Name="MiddleName" Type="varchar" MaxLength="40" />
+          <Property Name="FirstName" Type="varchar" MaxLength="40" />
+          <Property Name="UserAddressID" Type="int" Nullable="false" />
+          <Property Name="Address1" Type="varchar" MaxLength="255" />
+          <Property Name="Address2" Type="varchar" MaxLength="255" />
+          <Property Name="City" Type="varchar" MaxLength="255" />
+          <Property Name="StateProvince" Type="varchar" MaxLength="255" />
+          <Property Name="PostalCode" Type="varchar" MaxLength="25" />
+          <Property Name="USPSValidationResult" Type="bit" />
+          <Property Name="ValidatedDate" Type="datetime2" Precision="7" />
+          <Property Name="CleansedAddress1" Type="varchar" MaxLength="255" />
+          <Property Name="CleansedAddress2" Type="varchar" MaxLength="255" />
+          <Property Name="CleansedCity" Type="varchar" MaxLength="255" />
+          <Property Name="CleansedStateProvince" Type="varchar" MaxLength="255" />
+          <Property Name="CleansedPostalCode" Type="varchar" MaxLength="25" />
+          <Property Name="ErrorNumber" Type="nvarchar" MaxLength="100" />
+          <Property Name="ErrorSource" Type="nvarchar" MaxLength="100" />
+          <Property Name="ErrorDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="ErrorHelpFile" Type="nvarchar" MaxLength="500" />
+          <Property Name="ErrorHelpContext" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityContainer Name="AddressValidationModelStoreContainer">
+          <EntitySet Name="AddressValidation" EntityType="Self.AddressValidation" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AddressValidation.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AddressValidation">
+          <Key>
+            <PropertyRef Name="AddressValidationId" />
+          </Key>
+          <Property Name="AddressValidationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SysCreated" Type="DateTime" Nullable="false" Precision="7" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="SysCreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="SysLastModified" Type="DateTime" Nullable="false" Precision="7" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="SysLastModifiedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="EnterpriseID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="LoginID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="UserAddressID" Type="Int32" Nullable="false" />
+          <Property Name="Address1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Address2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="StateProvince" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PostalCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="USPSValidationResult" Type="Boolean" />
+          <Property Name="ValidatedDate" Type="DateTime" Precision="7" />
+          <Property Name="CleansedAddress1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CleansedAddress2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CleansedCity" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CleansedStateProvince" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CleansedPostalCode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="ErrorNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ErrorSource" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ErrorDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ErrorHelpFile" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ErrorHelpContext" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="AddressValidationEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AddressValidations" EntityType="Self.AddressValidation" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AddressValidationModelStoreContainer" CdmEntityContainer="AddressValidationEntities">
+          <EntitySetMapping Name="AddressValidations">
+            <EntityTypeMapping TypeName="AddressValidation.Model.AddressValidation">
+              <MappingFragment StoreEntitySet="AddressValidation">
+                <ScalarProperty Name="AddressValidationId" ColumnName="AddressValidationId" />
+                <ScalarProperty Name="SysCreated" ColumnName="SysCreated" />
+                <ScalarProperty Name="SysCreatedBy" ColumnName="SysCreatedBy" />
+                <ScalarProperty Name="SysLastModified" ColumnName="SysLastModified" />
+                <ScalarProperty Name="SysLastModifiedBy" ColumnName="SysLastModifiedBy" />
+                <ScalarProperty Name="EnterpriseID" ColumnName="EnterpriseID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="UserAddressID" ColumnName="UserAddressID" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="StateProvince" ColumnName="StateProvince" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="USPSValidationResult" ColumnName="USPSValidationResult" />
+                <ScalarProperty Name="ValidatedDate" ColumnName="ValidatedDate" />
+                <ScalarProperty Name="CleansedAddress1" ColumnName="CleansedAddress1" />
+                <ScalarProperty Name="CleansedAddress2" ColumnName="CleansedAddress2" />
+                <ScalarProperty Name="CleansedCity" ColumnName="CleansedCity" />
+                <ScalarProperty Name="CleansedStateProvince" ColumnName="CleansedStateProvince" />
+                <ScalarProperty Name="CleansedPostalCode" ColumnName="CleansedPostalCode" />
+                <ScalarProperty Name="ErrorNumber" ColumnName="ErrorNumber" />
+                <ScalarProperty Name="ErrorSource" ColumnName="ErrorSource" />
+                <ScalarProperty Name="ErrorDescription" ColumnName="ErrorDescription" />
+                <ScalarProperty Name="ErrorHelpFile" ColumnName="ErrorHelpFile" />
+                <ScalarProperty Name="ErrorHelpContext" ColumnName="ErrorHelpContext" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
